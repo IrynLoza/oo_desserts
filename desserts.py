@@ -23,6 +23,17 @@ class Cupcake:
         self.qty = self.qty + amount
 
 
+    def sell(self, amount):
+
+        if self.qty == 0:
+            print('Sorry, these cupcakes are sold out')
+        elif amount > self.qty:
+            self.qty = 0
+        else:
+            self.qty = self.qty - amount    
+
+
+
 if __name__ == '__main__':
     import doctest
 
