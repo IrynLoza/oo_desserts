@@ -44,6 +44,10 @@ class Cupcake:
     @classmethod
     def get(cls, name):
 
+        if name in cls.cache:
+            return cls.cache[name]
+        print("Sorry, that cupcake doesn't exist")    
+
 
 
 
