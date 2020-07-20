@@ -30,7 +30,21 @@ class Cupcake:
         elif amount > self.qty:
             self.qty = 0
         else:
-            self.qty = self.qty - amount    
+            self.qty = self.qty - amount 
+
+
+    @staticmethod
+    def scale_recipe(ingredients, amount):
+
+        for index, ingredient in enumerate(ingredients):
+            ingredients[index] = (ingredient[0], ingredient[1] * amount)
+        return ingredients    
+
+
+    @classmethod
+    def get(cls, name):
+
+
 
 
 
